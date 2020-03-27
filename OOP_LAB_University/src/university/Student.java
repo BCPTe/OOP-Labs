@@ -35,8 +35,8 @@ public class Student {
 		return id + " " + name + " " + surname;
 	}
 	
-	public void addCorso(int code) {
-		corsiSeguiti[totCorsiSeguiti]=University.getCorso(code);
+	public void addCorso(Course toAdd) {
+		corsiSeguiti[totCorsiSeguiti]=toAdd;
 		
 		totCorsiSeguiti++;
 	}

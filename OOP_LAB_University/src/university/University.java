@@ -113,7 +113,7 @@ public class University {
 	 * @param courseCode id of the course
 	 */
 	public void register(int studentID, int courseCode){
-		studenti[studentID-10000].addCorso(courseCode);
+		studenti[studentID-10000].addCorso(getCorso(courseCode));
 		getCorso(courseCode).addStdToCourse(studenti[studentID-10000]);
 	}
 	
