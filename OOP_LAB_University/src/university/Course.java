@@ -1,11 +1,13 @@
 package university;
 
 public class Course {
-	String title;
-	String teacher;
-	int code;
+	private String title;
+	private String teacher;
+	private int code;
 	private int totIscritti;
-	Student iscritti[];
+	private Student iscritti[];
+	private float examinated[];
+	private int totExaminated;
 	
 	private final static int MAX_STD_CORSO=100;
 	
@@ -21,10 +23,16 @@ public class Course {
 		this.code=10+code;
 		this.totIscritti=0;
 		this.iscritti=new Student[MAX_STD_CORSO];
+		this.examinated=new float[MAX_STD_CORSO];
+		this.totExaminated=0;
 	}
 	
 	public int getCode() {
 		return code;
+	}
+	
+	public String getTitle() {
+		return title;
 	}
 	
 	public String CourseToString() {
@@ -46,5 +54,23 @@ public class Course {
 		}
 		
 		return str.toString();
+	}
+	
+	public int getTotExaminated() {
+		return this.totExaminated;
+	}
+	
+	public void F5avg(int grade) {
+		this.examinated[this.totExaminated]=grade;
+		this.totExaminated++;
+	}
+	
+	public float getAvg() {
+		float avg=0;
+		for(int i=0 ; i<this.totExaminated ; i++)
+			avg+=this.examinated[i];
+		avg/=this.totExaminated;
+		
+		return avg;
 	}
 }

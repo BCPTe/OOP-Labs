@@ -7,15 +7,14 @@ package university;
  *
  */
 public class University {
-	String name;
-	String rector;
-	private int totStudents;
-	Student studenti[];
+	private String name;
+	private String rector;
+	protected int totStudents;
+	protected Student studenti[];
 	private int totCourses;
 	static Course corsi[];
 	
-	
-	private final static int MAX_STUDENTI=1000;
+	protected final static int MAX_STUDENTI=1000;
 	private final static int MAX_CORSI=50;
 	
 	/**
@@ -55,6 +54,10 @@ public class University {
 	 */
 	public String getRector(){
 		return rector;
+	}
+	
+	public Student getStudent(int ID) {
+		return studenti[ID];
 	}
 	
 	/**
@@ -104,7 +107,7 @@ public class University {
 	 * @return information about the course
 	 */
 	public String course(int code){
-		return corsi[10-code].CourseToString();
+		return corsi[code-10].CourseToString();
 	}
 	
 	/**
