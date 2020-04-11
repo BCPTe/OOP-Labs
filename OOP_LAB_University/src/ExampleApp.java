@@ -1,9 +1,9 @@
-import university.*;
 import university.UniversityExt;
+import java.io.IOException;
 
 public class ExampleApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		String universityName = "Politecnico di Torino";
 		
