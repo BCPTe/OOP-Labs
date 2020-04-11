@@ -11,8 +11,8 @@ public class University {
 	private String rector;
 	protected int totStudents;
 	protected Student studenti[];
-	private int totCourses;
-	static Course corsi[];
+	protected int totCourses;
+	protected Course corsi[];
 	
 	protected final static int MAX_STUDENTI=1000;
 	private final static int MAX_CORSI=50;
@@ -120,7 +120,7 @@ public class University {
 		getCorso(courseCode).addStdToCourse(studenti[studentID-10000]);
 	}
 	
-	public static Course getCorso(int code) {
+	public Course getCorso(int code) {
 		return corsi[code-10];
 	}
 	

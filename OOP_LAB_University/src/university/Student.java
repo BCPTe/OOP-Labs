@@ -1,7 +1,7 @@
 package university;
-import java.lang.Float.*;
+import java.lang.Float;
 
-public class Student implements Comparable {
+public class Student implements Comparable<Object> {
 	private String name;
 	private String surname;
 	private int id;

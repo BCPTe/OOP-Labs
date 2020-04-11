@@ -12,4 +12,8 @@ public class Exam {
 	public int getPoints() {
 		return points;
 	}
+	
+	public Course getCourse() {
+		return course;
+	}
 }
